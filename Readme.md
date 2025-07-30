@@ -1,6 +1,6 @@
 # CSE 208: Database Madness
 
-In this course, we will learn the practical applications of an **Relational Database** by writing and understanding **SQL queries**. We will use **XAMPP** to execute the SQL queries on our local machine.
+In this course, we will learn the practical applications of a **Relational Database** by writing and understanding **SQL queries**. We will use **XAMPP** to execute the SQL queries on our local machine.
 
 ## Installing XAMPP
 
