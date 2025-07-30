@@ -132,7 +132,7 @@ SELECT loan_number FROM loan WHERE branch_name IN("Perryridge", "Downtown", "Mia
 ## 5. Find the names of all customers who are not from `Stamford` or `Princeton` or `Harrison` city
 
 ```sql
-SELECT customer_name from customer WHERE customer_city NOT IN("Stamford", "Princeton", "Harrison");
+SELECT customer_name FROM customer WHERE customer_city NOT IN("Stamford", "Princeton", "Harrison");
 ```
 
 ![Task 5](images/10.png)
