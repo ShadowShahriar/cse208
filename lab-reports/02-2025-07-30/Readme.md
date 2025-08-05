@@ -8,7 +8,7 @@ Creating a new database:
 CREATE DATABASE bank_408;
 ```
 
-Creating six tables: `account`, `branch`, `depositor`, `customer`, `loan`, and `borrower`
+Creating six tables: `account`, `branch`, `depositor`, `customer`, `loan` and `borrower`
 
 ```sql
 CREATE TABLE account (account_number char(5), branch_name varchar(32), balance int(7));
