@@ -54,14 +54,14 @@ INSERT INTO `account` (`account_number`, `branch_name`, `balance`) VALUES
 
 CREATE TABLE `borrower` (
   `customer_name` varchar(32) DEFAULT NULL,
-  `load_number` char(8) DEFAULT NULL
+  `loan_number` char(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `borrower`
 --
 
-INSERT INTO `borrower` (`customer_name`, `load_number`) VALUES
+INSERT INTO `borrower` (`customer_name`, `loan_number`) VALUES
 ('Adams', 'L-16'),
 ('Curry', 'L-93'),
 ('Hayes', 'L-15'),

@@ -16,7 +16,7 @@ CREATE TABLE branch (branch_name varchar(32), branch_city varchar(32), assets in
 CREATE TABLE depositor (customer_name varchar(32), account_number char(5));
 CREATE TABLE customer (customer_name varchar(32), customer_street varchar(32), customer_city varchar(32));
 CREATE TABLE loan (loan_number char(5), branch_name varchar(32), amount int(8));
-CREATE TABLE borrower (customer_name varchar(32), load_number char(8));
+CREATE TABLE borrower (customer_name varchar(32), loan_number char(8));
 ```
 
 Inserting data to the tables:
