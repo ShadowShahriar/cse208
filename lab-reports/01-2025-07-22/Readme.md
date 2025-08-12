@@ -150,7 +150,7 @@ UPDATE student SET Age=19 WHERE ID=23;
 ### f. Find the names of all courses in the `course` table
 
 ```sql
-SELECT Course_Title from course;
+SELECT Course_Title FROM course;
 ```
 
 ![Operation 3(f)](images/13.png)
@@ -209,8 +209,8 @@ SELECT ID FROM Student WHERE Intake = 44 OR CGPA < 3.4;
 ### m. Find the ID of all those students whose CGPA is either 3.50, 3.60, or 3.96
 
 ```sql
-Select ID FROM Student WHERE CGPA IN(3.5, 3.6, 3.96);
-Select ID FROM Student WHERE CGPA NOT IN(3.5, 3.6, 3.96);
+SELECT ID FROM Student WHERE CGPA IN(3.5, 3.6, 3.96);
+SELECT ID FROM Student WHERE CGPA NOT IN(3.5, 3.6, 3.96);
 ```
 
 ![Operation 3(m)](images/20.png)
