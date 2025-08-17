@@ -39,11 +39,15 @@ INSERT INTO product VALUES(6, "Chocolate", "DairyMilk", 150, 120, "India", "15.8
 SELECT Count(*) "Total number of products" FROM product WHERE madein="BD";
 ```
 
+![Task 1](images/03.png)
+
 ## 2. Which product has the maximum stock?
 
 ```sql
 SELECT * FROM product WHERE stock=(SELECT Max(stock) FROM product);
 ```
+
+![Task 2](images/04.png)
 
 ## 3. Which products have prices greater than the average price of all products?
 
@@ -51,11 +55,15 @@ SELECT * FROM product WHERE stock=(SELECT Max(stock) FROM product);
 SELECT * FROM product WHERE price > (SELECT Avg(price) FROM product);
 ```
 
+![Task 3](images/05.png)
+
 ## 4. Change the description of pen from Green to Red
 
 ```sql
 UPDATE product SET description="Red" WHERE item="Pen";
 ```
+
+![Task 4](images/06.png)
 
 ## 5. Increase the price of each product by 5%
 
@@ -63,14 +71,20 @@ UPDATE product SET description="Red" WHERE item="Pen";
 UPDATE product SET price=(price * (1 + 0.05));
 ```
 
+![Task 5](images/07.png)
+
 ## 6. Find the products order on the 13th of August
 
 ```sql
 SELECT * FROM product WHERE order_="13.8.24";
 ```
 
+![Task 6](images/08.png)
+
 ## 7. Find the product name which has consecutive two `g`
 
 ```sql
 SELECT item from product WHERE item LIKE "%gg";
 ```
+
+![Task 7](images/09.png)
