@@ -61,7 +61,7 @@ Major Tasks and Responsibilities of a Database Administrator (**DBA**):
 
 Given relational schema:
 
-```sql
+```
 Employee(emp_no, name, address, dept, salary)
 Books(isbn, title, authors, publisher)
 Loan(emp_no, isbn, date)
@@ -81,7 +81,7 @@ Writing the SQL queries for the following tasks:
     ```sql
     SELECT *
     FROM Books
-    WHERE title LIKE '%s%';
+    WHERE title LIKE "%s%";
     ```
 
 3. Find the name of those employees who have borrowed a book with isbn `123A`
@@ -94,6 +94,6 @@ Writing the SQL queries for the following tasks:
 
     ```sql
     UPDATE Employee
-    SET address = 'Mirpur 10'
-    WHERE address = 'Mirpur 2';
+    SET address = "Mirpur 10"
+    WHERE address = "Mirpur 2";
     ```
