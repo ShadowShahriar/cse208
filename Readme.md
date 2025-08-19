@@ -2,6 +2,10 @@
 
 In this course, we will learn the practical applications of a **Relational Database** by writing and understanding **SQL queries**. We will use **XAMPP** to execute the SQL queries on our local machine.
 
+📌 [**Useful Resources**](#useful-resources)
+
+📌 [**SQL Cheat Sheet**](./cheatsheet.md)
+
 ## Installing XAMPP
 
 Here is how we install **XAMPP** on **Windows**:
@@ -31,3 +35,7 @@ Having done that, we open **Google Chrome** or **Firefox** and navigate to the f
 ```
 http://localhost/phpmyadmin/
 ```
+
+## Useful Resources
+
+[![youtube logo](./images/yt.svg) **How to install XAMPP on Windows 11 (Updated 2025)**](https://youtu.be/UjAbsItMPRY)
