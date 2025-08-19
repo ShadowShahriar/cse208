@@ -13,7 +13,7 @@ CREATE DATABASE eval_408;
 ## Table Creation
 
 ```sql
-CREATE TABLE product (id int(3), item varchar(32), description varchar(32), price int(8), stock int(5), madein varchar(16), order_ varchar(16));
+CREATE TABLE product(id int(3), item varchar(32), description varchar(32), price int(8), stock int(5), madein varchar(16), order_ varchar(16));
 ```
 
 ![Table creation](images/01.png)
