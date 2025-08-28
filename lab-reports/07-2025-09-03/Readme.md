@@ -11,8 +11,22 @@ CREATE DATABASE company;
 Create two tables: `employee` and `department`:
 
 ```sql
-CREATE TABLE employee(emp_id int(6), emp_name varchar(12), job_name varchar(16), manager_id int(6), hire_date varchar(12), salary int(8), commission int(8), dep_id int(4));
-CREATE TABLE department(dep_id int(4), dep_name varchar(16), dep_location varchar(24));
+CREATE TABLE employee(
+	emp_id int(6),
+	emp_name varchar(12),
+	job_name varchar(16),
+	manager_id int(6),
+	hire_date varchar(12),
+	salary int(8),
+	commission int(8),
+	dep_id int(4)
+);
+
+CREATE TABLE department(
+	dep_id int(4),
+	dep_name varchar(16),
+	dep_location varchar(24)
+);
 ```
 
 Inserting data into the tables:
@@ -43,7 +57,7 @@ INSERT INTO department VALUES(4001, "PRODUCTION", "BRISBANE");
 
 # Lab Tasks
 
-## Employee Details
+## 1. Employee Details
 
 From the following table, write a SQL query to find **employees** along with their **department details**.
 
@@ -55,7 +69,7 @@ SELECT * FROM employee NATURAL JOIN department;
 
 ![Task 1](images/Q1.png)
 
-## Well Paid Employees
+## 2. Well Paid Employees
 
 From the following table, write a SQL query to identify those employees who earn **60000 or more** per year _or_ **DO NOT work as ANALYST**.
 
@@ -66,7 +80,7 @@ WHERE salary >= 60000 OR job_name != "ANALYST";
 
 ![Task 2](images/Q2.png)
 
-## Third Highest Paid
+## 3. Third Highest Paid Employee
 
 Find the **third highest salary** of the employee.
 
