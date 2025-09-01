@@ -1,4 +1,101 @@
-# Seventh Lab
+---
+title: Database Systems
+author: S. Shahriar <shadowshahriar@gmail.com>
+subject: Lab Report 6
+keywords: xampp, mysql
+colorTheme: light
+codeTheme: stackoverflow-light
+fonts: ['Nunito:ital,wght@0,200..1000;1,200..1000', 'JetBrains+Mono:ital,wght@0,100..800;1,100..800']
+cssFontText: ['Nunito']
+cssFontCode: ['JetBrains Mono']
+cssFontEmoji: ['Noto+Color+Emoji']
+cssWatermark: ['20245103408']
+specialWords: ['Ans.', 'Output:']
+cssPageHeader: ['']
+headerClass: new-page
+lang: none
+addCover: true
+coverPageName: Cover Page
+cssPageNumberPlacement: right
+preset: none
+---
+
+::: {#cover.border}
+
+<section>
+	<img id="watermark" class="round" src="./bubt.png" width="200px" />
+</section>
+<section>
+	<p class="h1 w800 underline text-upr">Lab Report</p>
+	<table class="compact borderless table-large table-upr padless" style="width: 5.1in">
+		<tr>
+			<th>Course Title</th>
+			<th>:</th><td>Database Systems Lab</td>
+		</tr>
+		<tr>
+			<th>Course Code</th>
+			<th>:</th><td>CSE 208</td>
+		</tr>
+		<tr>
+			<th>Lab Report No.</th>
+			<th>:</th><td>06</td>
+		</tr>
+		<tr>
+			<th>Submission Date</th>
+			<th>:</th><td>03-09-2025</td>
+		</tr>
+	</table>
+</section>
+<section style="--hw: 7.2rem;">
+	<p class="h2 w800 text-upr">Submitted To</p>
+	<table class="compact borderless table-large table-upr padless withleader">
+		<tr>
+			<th>Name</th>
+			<td>Farha Akhter Munmun</td>
+		</tr>
+		<tr>
+			<th>Dept. of</th>
+			<td>Computer Science and Engineering (CSE)</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>Bangladesh University of Business & Technology (BUBT)</td>
+		</tr>
+	</table>
+</section>
+<section style="--hw: 7.2rem;">
+	<p class="h2 w800 text-upr">Submitted By</p>
+	<table class="compact borderless table-large table-upr padless withleader">
+		<tr>
+			<th>Name</th>
+			<td>Shadman Shahriar</td>
+		</tr>
+		<tr>
+			<th>ID No.</th>
+			<td>20245103408</td>
+		</tr>
+		<tr>
+			<th>Intake</th>
+			<td>53</td>
+		</tr>
+		<tr>
+			<th>Section</th>
+			<td>1</td>
+		</tr>
+		<tr>
+			<th>Program</th>
+			<td>B.Sc. Engg. in CSE</td>
+		</tr>
+	</table>
+</section>
+
+:::
+
+::: {.centered-heading}
+
+# Database Systems Lab
+
+:::
 
 ## Prerequisite
 
@@ -50,14 +147,13 @@ INSERT INTO department VALUES(3001, "MARKETING", "PERTH");
 INSERT INTO department VALUES(4001, "PRODUCTION", "BRISBANE");
 ```
 
-<p align="center">
-<img src="images/01.png"/>
-<img src="images/00.png"/>
-</p>
+![Employee relation](images/01.png)
 
-# Lab Tasks
+![Department relation](images/00.png)
 
-## 1. Employee Details
+## Lab Tasks
+
+### 1. Employee Details
 
 From the following table, write a SQL query to find **employees** along with their **department details**.
 
@@ -69,7 +165,7 @@ SELECT * FROM employee NATURAL JOIN department;
 
 ![Task 1](images/Q1.png)
 
-## 2. Well Paid Employees
+### 2. Well Paid Employees
 
 From the following table, write a SQL query to identify those employees who earn **60000 or more** per year _or_ **DO NOT work as ANALYST**.
 
@@ -80,7 +176,7 @@ WHERE salary >= 60000 OR job_name != "ANALYST";
 
 ![Task 2](images/Q2.png)
 
-## 3. Third Highest Paid Employee
+### 3. Third Highest Paid Employee
 
 Find the **third highest salary** of the employee.
 
@@ -90,14 +186,3 @@ ORDER BY salary DESC LIMIT 2, 1
 ```
 
 ![Task 3](images/Q3.png)
-
-> [!NOTE]
-> The `LIMIT` clause is used to specify the number of records to return.
->
-> ```sql
-> SELECT COL_NAME, ...
-> FROM T_NAME
-> LIMIT OFFSET, ROW_COUNT;
-> ```
->
-> `OFFSET` starts from 0 and `ROW_COUNT` starts from 1.
