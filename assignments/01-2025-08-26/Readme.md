@@ -107,7 +107,7 @@ ORDER BY customer_name ASC;
 **Relational Algebra:**
 
 ```math
-\Large\tau_{customer\_name} \; (\pi_{customer\_name} (\sigma_{branch\_name = "Perryridge"} (Borrower\ \bowtie\ Loan)))
+\Large\tau_{customer\_name} \; (\pi_{customer\_name} (\sigma_{branch\_name = "Perryridge"} (Borrower\ ⨝\ Loan)))
 ```
 
 ### 5. Find all customers having a loan, an account, or both at the bank
