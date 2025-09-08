@@ -2,12 +2,12 @@
 
 The schema definition of some relations are given as the following:
 
-<strong>customer</strong> (<u>customer_name</u>, customer_street, customer_city)
-<br><strong>loan</strong> (<u>loan_number</u>, branch_name, amount)
-<br><strong>borrower</strong> (<u>customer_name, loan_number</u>)
-<br><strong>account</strong> (<u>account_number</u>, branch_name, balance)
-<br><strong>depositor</strong> (<u>customer_name, account_number</u>)
-<br><strong>branch</strong> (<u>branch_name</u>, branch_city, assets)
+<strong>customer</strong> (<ins>customer_name</ins>, customer_street, customer_city)
+<br><strong>loan</strong> (<ins>loan_number</ins>, branch_name, amount)
+<br><strong>borrower</strong> (<ins>customer_name, loan_number</ins>)
+<br><strong>account</strong> (<ins>account_number</ins>, branch_name, balance)
+<br><strong>depositor</strong> (<ins>customer_name, account_number</ins>)
+<br><strong>branch</strong> (<ins>branch_name</ins>, branch_city, assets)
 
 ## Data Tables
 
