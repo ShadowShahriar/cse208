@@ -239,7 +239,7 @@ SELECT * FROM loan NATURAL LEFT OUTER JOIN borrower;
 
 ![Task 12B](images/Q12b.png)
 
-Performing am **INNER JOIN**:
+Performing an **INNER JOIN**:
 
 ```sql
 SELECT * FROM loan INNER JOIN borrower;
@@ -337,7 +337,7 @@ HAVING AVG(amount) > 1500;
 
 ![Task 7](images/Q7.png)
 
-### 8. Count the number of tuples in customer relations
+### 8. Count the number of tuples in customer relation
 
 **SQL:**
 
