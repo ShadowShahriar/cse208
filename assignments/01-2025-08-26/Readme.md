@@ -156,7 +156,7 @@ HAVING AVG(amount) > 1500;
 \Largeγ_{branch\_name,\ AVG(amount)}\ σ_{AVG(amount)\ >\ 1500} (Loan)
 ```
 
-### 8. Count the number of tuples in customer relations
+### 8. Count the number of tuples in the customer relation
 
 **SQL:**
 
