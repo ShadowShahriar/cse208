@@ -137,7 +137,7 @@ WHERE customer_street LIKE "%Main%";
 **Relational Algebra:**
 
 ```math
-\Largeπ_{customer\_name} (σ_{street\ LIKE\ "\%Main\%"} (Customer))
+\Largeπ_{customer\_name} (σ_{customer\_street\ LIKE\ "\%Main\%"} (Customer))
 ```
 
 ### 7. Find the average loan amount from each branch where the average loan amount is greater than 1500
