@@ -69,7 +69,7 @@ or
 
 ```sql
 SELECT * FROM customer
-WHERE street LIKE "%ss%";
+WHERE customer_street LIKE "%ss%";
 ```
 
 **Relational Algebra:**
@@ -161,7 +161,7 @@ HAVING AVG(amount) > 1500;
 **SQL:**
 
 ```sql
-SELECT COUNT(*) FROM customer;
+SELECT COUNT(customer_name) FROM customer;
 ```
 
 **Relational Algebra:**
@@ -175,7 +175,7 @@ SELECT COUNT(*) FROM customer;
 **SQL:**
 
 ```sql
-SELECT branch_name, AVG(balance), MAX(balance) FROM customer
+SELECT branch_name, AVG(balance), MAX(balance) FROM account
 GROUP BY branch_name;
 ```
 
@@ -223,7 +223,152 @@ WHERE balance < (
 
 Consider the following tables `loan` and `borrower`. Perform **RIGHT OUTER JOIN**, **LEFT OUTER JOIN**, **INNER JOIN**, and **NATURAL JOIN** operations and show the results.
 
+Performing a **RIGHT OUTER JOIN**:
+
+```sql
+SELECT * FROM loan NATURAL RIGHT OUTER JOIN borrower;
+```
+
+![Task 12A](images/Q12a.png)
+
+Performing a **LEFT OUTER JOIN**:
+
+```sql
+SELECT * FROM loan NATURAL LEFT OUTER JOIN borrower;
+```
+
+![Task 12B](images/Q12b.png)
+
+Performing am **INNER JOIN**:
+
+```sql
+SELECT * FROM loan INNER JOIN borrower;
+```
+
+![Task 12C](images/Q12c.png)
+
+Performing a **NATURAL JOIN**:
+
+```sql
+SELECT * FROM loan NATURAL JOIN borrower;
+```
+
+![Task 12D](images/Q12d.png)
+
 ## Q3. Demonstrate the output of the above questions from Question 2 (1-10)
+
+### 1. Find the average loan amount from each branch
+
+**SQL:**
+
+```sql
+SELECT branch_name, AVG(amount) "Average Loan" FROM loan
+GROUP BY branch_name;
+```
+
+![Task 1](images/Q1.png)
+
+### 2. Write a query to show the details of a customer whose street name has two consecutive "s"
+
+**SQL:**
+
+```sql
+SELECT * FROM customer
+WHERE customer_street LIKE "%ss%";
+```
+
+![Task 2](images/Q2.png)
+
+### 3. Find all customers who have a loan from the bank, find their names and loan numbers
+
+**SQL:**
+
+```sql
+SELECT customer_name, loan_number
+FROM borrower;
+```
+
+![Task 3](images/Q3.png)
+
+### 4. Find the list of all customers in alphabetic order who have a loan in the "Perryridge" branch
+
+**SQL:**
+
+```sql
+SELECT DISTINCT customer_name
+FROM borrower NATURAL JOIN loan
+WHERE branch_name = 'Perryridge'
+ORDER BY customer_name ASC;
+```
+
+![Task 4](images/Q4.png)
+
+### 5. Find all customers having a loan, an account, or both at the bank
+
+**SQL:**
+
+```sql
+SELECT customer_name FROM borrower
+UNION SELECT customer_name FROM depositor;
+```
+
+![Task 5](images/Q5.png)
+
+### 6. Find the names of all customers whose street address includes the substring "Main"
+
+**SQL:**
+
+```sql
+SELECT customer_name FROM customer
+WHERE customer_street LIKE "%Main%";
+```
+
+![Task 6](images/Q6.png)
+
+### 7. Find the average loan amount from each branch where the average loan amount is greater than 1500
+
+**SQL:**
+
+```sql
+SELECT branch_name, AVG(amount) FROM loan
+GROUP BY branch_name
+HAVING AVG(amount) > 1500;
+```
+
+![Task 7](images/Q7.png)
+
+### 8. Count the number of tuples in customer relations
+
+**SQL:**
+
+```sql
+SELECT COUNT(customer_name) FROM customer;
+```
+
+![Task 8](images/Q8.png)
+
+### 9. Find the average account balance, maximum account balance at each branch
+
+**SQL:**
+
+```sql
+SELECT branch_name, AVG(balance), MAX(balance) FROM account
+GROUP BY branch_name;
+```
+
+![Task 9](images/Q9.png)
+
+### 10. Find the names of all those customers who have a loan at Perryridge branch
+
+**SQL:**
+
+```sql
+SELECT customer_name
+FROM borrower NATURAL JOIN loan
+WHERE branch_name = "Perryridge";
+```
+
+![Task 10](images/Q10.png)
 
 ## Q4. Identify all possible superkeys and candidate keys
 
