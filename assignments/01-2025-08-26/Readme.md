@@ -377,3 +377,29 @@ Given relation:
 ```
 Employee (EmpID, Name, Email, Phone, Department)
 ```
+
+In the Employee relation:
+
+-   **EmpID** is unique (potential Primary Key).
+-   **Email** and **Phone** are usually unique.
+-   **Name** and **Department** are not unique because two employees can have the same name or work in the same department.
+
+Therefore, potential candidate keys are: `{EmpID}`, `{Email}`, `{Phone}`
+
+We know that, a superkey is any set of attributes that uniquely identifies a tuple. **Any superset of a candidate key is also a superkey.**
+
+Possible superkeys are:
+
+-   `{EmpID}`
+-   `{Email}`
+-   `{Phone}`
+-   `{EmpID, Name}`, `{EmpID, Email}`, `{EmpID, Phone}`, `{EmpID, Department}`, ...
+-   `{Email, Name}`, `{Email, Phone}`, `{Email, Department}`, ...
+-   `{Phone, Name}`, `{Phone, Department}`, ...
+-   `{EmpID, Name, Email, Phone, Department}`
+
+Basically all subsets that contain **at least one candidate key**.
+
+Again, candidate keys are minimal superkeys (no attribute can be removed without losing uniqueness)
+
+Therefore, candidate keys are: `{EmpID}`, `{Email}`, `{Phone}`.
