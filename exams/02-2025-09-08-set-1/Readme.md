@@ -50,7 +50,7 @@ WHERE location = "Dhaka";
 **Relational Algebra:**
 
 ```math
-\Large π_{name,\ dept\_ n​ame}​(σ_{location="Dhaka"}​(Employee⋈Department))
+\Largeπ_{name,\ dept\_name} ​(σ_{location="Dhaka"}​ (Employee ⋈ Department))
 ```
 
 ### Q2. Get the list of employee IDs who work more than 20 hrs per week
@@ -65,7 +65,7 @@ WHERE hours > 20;
 **Relational Algebra:**
 
 ```math
-\Large π_{emp\_ i​d}​(σ_{hours>20}​(Works\_on))
+\Largeπ_{emp\_id} ​(σ_{hours>20}​(Works\_on))
 ```
 
 ### Q3. Retrieve the employee IDs of employees who work in department 10
@@ -80,7 +80,7 @@ WHERE dept_id = 10;
 **Relational Algebra:**
 
 ```math
-\Large π_{emp\_ i​d}​(σ_{dept\_ i​d=10}​(Employee))
+\Largeπ_{emp\_id}​(σ_{dept\_id=10}​(Employee))
 ```
 
 ### Q4. Retrieve the names of all employees
@@ -94,5 +94,5 @@ SELECT name FROM employee;
 **Relational Algebra:**
 
 ```math
-\Large π_{name}​(Employee)
+\Largeπ_{name}​(Employee)
 ```
